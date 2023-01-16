@@ -1,15 +1,15 @@
-<h1>Lista de Personas</h1>
+<h1>Lista</h1>
 
- 
 <div class="w-3/4 mx-auto">
 
-    <div class="grid grid-cols-4 gap-4">
-        <div *ngFor="let p of data" class="bg-blue-100">
-            <img src="{{p.image}}" alt="" width="100%">
-            <p class="text-center ">{{p.name}}</p>
-        </div> 
+    <div class="grid grid-cols-4 gap-4 tex-center">
+        <div *ngFor="let dato of data" class="bg-blue-100 rounded-lg">
+            <img src="{{dato.image}}" alt="" width="100%">
+            <p class="text-xl font-bold">{{dato.orden}}</p> 
+            <p class="text-xl font-bold">{{dato.name | uppercase}}</p> 
+        </div>
     </div>
 
-
 </div>
+
 

@@ -12,8 +12,9 @@ export class PokedexService {
     console.log('Pokedex')
   }
 
+
   getPokemon(index: string){
     return this.http.get<any>(`${this.urlBase}/pokemon/${index}`);
-    
   }
+
 }

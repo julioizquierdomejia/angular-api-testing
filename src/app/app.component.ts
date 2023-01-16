@@ -20,6 +20,8 @@ export class AppComponent implements OnInit{
     this.getPokemons()
   }
 
+  
+    
   getPokemons(){
 
     let pokemonData;
@@ -31,7 +33,8 @@ export class AppComponent implements OnInit{
           pokemonData = {
             position: i,
             image: res.sprites.front_default,
-            name: res.name
+            name: res.name,
+            orden: res.order
           }
           this.data.push(pokemonData)
           console.log(res);
@@ -44,6 +47,6 @@ export class AppComponent implements OnInit{
     }
     
   }
-    
+  
 
 }
