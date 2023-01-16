@@ -6,18 +6,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class PokedexService {
 
-  //urlBase="https://pokeapi.co/api/v2/pokemon/";
-  urlBase= "https://jsonplaceholder.typicode.com/albums";
+  urlBase="https://pokeapi.co/api/v2";
 
   constructor(private http:HttpClient) { 
     console.log('Pokedex')
   }
 
-  getPokemon(){
-    let heades = new HttpHeaders()
-      .set('Type-content', 'aplication/json');
-
-    //return this.http.get<any>(`${this.urlBase}${index}`, {headers:heades});
-    return this.http.get(this.urlBase);
+  getPokemon(index: string){
+    return this.http.get<any>(`${this.urlBase}/pokemon/${index}`);
+    
   }
 }

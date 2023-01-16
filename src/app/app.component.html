@@ -1,7 +1,15 @@
 <h1>Lista de Personas</h1>
 
-<ul>
-    <li *ngFor="let p of pokemons">
-        {{p.title}}
-    </li>
-</ul>
+ 
+<div class="w-3/4 mx-auto">
+
+    <div class="grid grid-cols-4 gap-4">
+        <div *ngFor="let p of data" class="bg-blue-100">
+            <img src="{{p.image}}" alt="" width="100%">
+            <p class="text-center ">{{p.name}}</p>
+        </div> 
+    </div>
+
+
+</div>
+
